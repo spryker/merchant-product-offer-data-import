@@ -95,7 +95,7 @@ class MerchantCombinedProductOfferPriceExtractorStep implements DataImportStepIn
 
             $productOfferPrices[] = [
                 static::KEY_STORE => $store,
-                static::KEY_PRICE_TYPE => $priceType,
+                static::KEY_PRICE_TYPE => strtoupper($priceType),
                 static::KEY_CURRENCY => $currency,
                 static::KEY_VALUE => $dataSet[$dataSetKey],
                 static::KEY_VALUE_TYPE => $valueType,
