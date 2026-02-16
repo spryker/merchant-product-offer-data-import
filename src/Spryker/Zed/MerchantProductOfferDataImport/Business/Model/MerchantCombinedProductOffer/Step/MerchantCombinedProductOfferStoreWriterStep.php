@@ -122,7 +122,7 @@ class MerchantCombinedProductOfferStoreWriterStep extends PublishAwareStep imple
     }
 
     /**
-     * @return list<string>
+     * @return array<string>
      */
     protected function getStoreNames(DataSetInterface $dataSet): array
     {

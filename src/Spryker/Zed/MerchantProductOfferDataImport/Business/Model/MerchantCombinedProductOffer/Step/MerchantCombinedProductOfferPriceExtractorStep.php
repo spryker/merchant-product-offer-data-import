@@ -82,7 +82,7 @@ class MerchantCombinedProductOfferPriceExtractorStep implements DataImportStepIn
     }
 
     /**
-     * @param list<string> $productOfferPriceDataSetKeys
+     * @param array<string> $productOfferPriceDataSetKeys
      *
      * @return array<string, array<string, mixed>>
      */
@@ -108,7 +108,7 @@ class MerchantCombinedProductOfferPriceExtractorStep implements DataImportStepIn
     /**
      * @throws \Spryker\Zed\MerchantProductOfferDataImport\Business\Model\MerchantCombinedProductOffer\Exception\MerchantCombinedProductOfferException
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function getProductOfferPriceKeyParts(string $dataSetKey): array
     {
@@ -160,7 +160,7 @@ class MerchantCombinedProductOfferPriceExtractorStep implements DataImportStepIn
     }
 
     /**
-     * @return list<string>
+     * @return array<string>
      */
     protected function getProductOfferPriceDataSetKeys(DataSetInterface $dataSet): array
     {
@@ -170,7 +170,7 @@ class MerchantCombinedProductOfferPriceExtractorStep implements DataImportStepIn
     }
 
     /**
-     * @param list<string> $dataSetKeys
+     * @param array<string> $dataSetKeys
      *
      * @throws \Spryker\Zed\MerchantProductOfferDataImport\Business\Model\MerchantCombinedProductOffer\Exception\MerchantCombinedProductOfferException
      */

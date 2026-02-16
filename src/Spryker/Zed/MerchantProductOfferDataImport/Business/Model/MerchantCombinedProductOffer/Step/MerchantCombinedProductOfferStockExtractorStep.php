@@ -53,7 +53,7 @@ class MerchantCombinedProductOfferStockExtractorStep implements DataImportStepIn
     }
 
     /**
-     * @return list<string>
+     * @return array<string>
      */
     protected function getStockDataSetKeys(DataSetInterface $dataSet): array
     {
@@ -65,7 +65,7 @@ class MerchantCombinedProductOfferStockExtractorStep implements DataImportStepIn
     /**
      * @throws \Spryker\Zed\MerchantProductOfferDataImport\Business\Model\MerchantCombinedProductOffer\Exception\MerchantCombinedProductOfferException
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function getProductOfferStockKeyParts(string $key): array
     {
