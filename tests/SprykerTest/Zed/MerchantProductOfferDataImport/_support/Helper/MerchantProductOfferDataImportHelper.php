@@ -12,9 +12,6 @@ use Orm\Zed\ProductOffer\Persistence\SpyProductOfferQuery;
 
 class MerchantProductOfferDataImportHelper extends Module
 {
-    /**
-     * @return void
-     */
     public function assertProductOfferDatabaseTableIsEmpty(): void
     {
         $query = $this->getProductOfferPropelQuery();
@@ -22,9 +19,6 @@ class MerchantProductOfferDataImportHelper extends Module
         $this->assertSame(0, $query->count(), 'Found at least one entry in the database table but database table was expected to be empty.');
     }
 
-    /**
-     * @return void
-     */
     public function assertProductOfferDatabaseTableContainsData(): void
     {
         $query = $this->getProductOfferPropelQuery();
@@ -32,9 +26,6 @@ class MerchantProductOfferDataImportHelper extends Module
         $this->assertTrue($query->count() > 0, 'Expected at least one entry in the database table but database table is empty.');
     }
 
-    /**
-     * @return \Orm\Zed\ProductOffer\Persistence\SpyProductOfferQuery
-     */
     protected function getProductOfferPropelQuery(): SpyProductOfferQuery
     {
         return SpyProductOfferQuery::create();

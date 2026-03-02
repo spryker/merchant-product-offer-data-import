@@ -108,9 +108,6 @@ class MerchantProductOfferDataImportConfig extends DataImportConfig
         return static::BULK_SIZE_MERCHANT_COMBINED_PRODUCT_OFFER_IMPORT;
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

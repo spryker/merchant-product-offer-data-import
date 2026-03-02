@@ -37,9 +37,6 @@ class MerchantProductOfferStoreDataImportPluginTest extends Unit
      */
     protected static $isProductOfferDataCreated = false;
 
-    /**
-     * @return void
-     */
     protected function _before(): void
     {
         if (!static::$isProductOfferDataCreated) {
@@ -58,9 +55,6 @@ class MerchantProductOfferStoreDataImportPluginTest extends Unit
         static::$isProductOfferDataCreated = true;
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -83,9 +77,6 @@ class MerchantProductOfferStoreDataImportPluginTest extends Unit
         $this->tester->assertProductOfferStoreDatabaseTableContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange

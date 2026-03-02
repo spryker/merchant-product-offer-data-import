@@ -34,9 +34,6 @@ class MerchantCombinedProductOfferValidityWriterStep implements DataImportStepIn
      */
     protected const ERROR_MESSAGE_INVALID_END_DATE = 'Invalid date format of validity end date.';
 
-    /**
-     * @param \Spryker\Zed\DataImport\Dependency\Facade\DataImportToEventFacadeInterface $eventFacade
-     */
     public function __construct(protected DataImportToEventFacadeInterface $eventFacade)
     {
     }

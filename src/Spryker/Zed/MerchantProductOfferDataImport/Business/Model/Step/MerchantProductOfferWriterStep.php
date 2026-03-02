@@ -65,9 +65,6 @@ class MerchantProductOfferWriterStep implements DataImportStepInterface, DataImp
      */
     protected $eventFacade;
 
-    /**
-     * @param \Spryker\Zed\DataImport\Dependency\Facade\DataImportToEventFacadeInterface $eventFacade
-     */
     public function __construct(DataImportToEventFacadeInterface $eventFacade)
     {
         $this->eventFacade = $eventFacade;
@@ -100,9 +97,6 @@ class MerchantProductOfferWriterStep implements DataImportStepInterface, DataImp
         $this->addProductUpdateEvent($productOfferEntity->getConcreteSku());
     }
 
-    /**
-     * @return void
-     */
     public function afterExecute(): void
     {
         $this->eventFacade->triggerBulk(static::PRODUCT_OFFER_PUBLISH, $this->productOfferEventTransfers);
@@ -116,11 +110,6 @@ class MerchantProductOfferWriterStep implements DataImportStepInterface, DataImp
         $this->productEventTransfers = [];
     }
 
-    /**
-     * @param \Orm\Zed\ProductOffer\Persistence\SpyProductOffer $productOfferEntity
-     *
-     * @return void
-     */
     protected function addPublishEvent(SpyProductOffer $productOfferEntity): void
     {
         $eventEntityTransfer = new EventEntityTransfer();
@@ -133,11 +122,6 @@ class MerchantProductOfferWriterStep implements DataImportStepInterface, DataImp
         $this->productOfferEventTransfers[] = $eventEntityTransfer;
     }
 
-    /**
-     * @param string $concreteProductSku
-     *
-     * @return void
-     */
     protected function addProductUpdateEvent(string $concreteProductSku): void
     {
         $spyProduct = SpyProductQuery::create()

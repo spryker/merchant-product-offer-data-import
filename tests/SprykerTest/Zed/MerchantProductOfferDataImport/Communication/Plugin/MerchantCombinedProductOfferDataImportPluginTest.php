@@ -32,9 +32,6 @@ class MerchantCombinedProductOfferDataImportPluginTest extends Unit
      */
     protected MerchantProductOfferDataImportCommunicationTester $tester;
 
-    /**
-     * @return void
-     */
     public function testImportFailsWhenDataImporterConfigurationNotProvided(): void
     {
         // Arrange
@@ -46,9 +43,6 @@ class MerchantCombinedProductOfferDataImportPluginTest extends Unit
         $merchantCombinedProductOfferDataImportPlugin->import();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange

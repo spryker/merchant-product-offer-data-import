@@ -28,9 +28,6 @@ use Spryker\Zed\MerchantProductOfferDataImport\MerchantProductOfferDataImportCon
  */
 class MerchantCombinedProductOfferMerchantFileValidationPluginTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testShouldNotReturnErrorsWhenRequiredHeadersArePresent(): void
     {
         // Arrange
@@ -50,9 +47,6 @@ class MerchantCombinedProductOfferMerchantFileValidationPluginTest extends Unit
         $this->assertEmpty($dataImportMerchantFileCollectionResponseTransfer->getErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnErrorsWhenRequiredHeadersAreMissing(): void
     {
         // Arrange
@@ -84,12 +78,6 @@ class MerchantCombinedProductOfferMerchantFileValidationPluginTest extends Unit
         $this->assertCount(2, $dataImportMerchantFileCollectionResponseTransfer->getErrors());
     }
 
-    /**
-     * @param string $importerType
-     * @param string $csvHeaders
-     *
-     * @return \Generated\Shared\Transfer\DataImportMerchantFileTransfer
-     */
     protected function createDataImportMerchantFileTransfer(
         string $importerType,
         string $csvHeaders

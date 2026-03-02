@@ -42,9 +42,6 @@ class MerchantProductOfferDataImportPluginTest extends Unit
      */
     protected static $isProductOfferDataCreated = false;
 
-    /**
-     * @return void
-     */
     protected function _before(): void
     {
         $this->tester->truncateProductOffers();
@@ -59,9 +56,6 @@ class MerchantProductOfferDataImportPluginTest extends Unit
         static::$isProductOfferDataCreated = true;
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -81,9 +75,6 @@ class MerchantProductOfferDataImportPluginTest extends Unit
         $this->tester->assertProductOfferDatabaseTableContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -93,9 +84,6 @@ class MerchantProductOfferDataImportPluginTest extends Unit
         $this->assertSame(MerchantProductOfferDataImportConfig::IMPORT_TYPE_MERCHANT_PRODUCT_OFFER, $dataImportPlugin->getImportType());
     }
 
-    /**
-     * @return void
-     */
     public function testMerchantSkuValidationStepDoesNotThrowExceptionIfMerchantSkuIsEmpty(): void
     {
         // Arrange
@@ -118,9 +106,6 @@ class MerchantProductOfferDataImportPluginTest extends Unit
         $this->assertTrue(true);
     }
 
-    /**
-     * @return void
-     */
     public function testMerchantSkuValidationStepThrowsExceptionIfProductOfferAlreadyExistForMerchantIdAndSku(): void
     {
         // Arrange

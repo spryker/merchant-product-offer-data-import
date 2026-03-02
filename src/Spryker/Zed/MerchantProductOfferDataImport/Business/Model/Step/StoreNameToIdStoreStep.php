@@ -23,11 +23,6 @@ class StoreNameToIdStoreStep implements DataImportStepInterface
      */
     protected $idStoreCache = [];
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $storeName = $dataSet[static::STORE_NAME];

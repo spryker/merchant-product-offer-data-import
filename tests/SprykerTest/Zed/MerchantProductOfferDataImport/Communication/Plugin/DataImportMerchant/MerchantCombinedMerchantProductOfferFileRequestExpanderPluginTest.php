@@ -29,9 +29,6 @@ use Spryker\Zed\MerchantProductOfferDataImport\MerchantProductOfferDataImportCon
  */
 class MerchantCombinedMerchantProductOfferFileRequestExpanderPluginTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testExpandSetsFileSystemNameForMerchantCombinedProductOfferType(): void
     {
         // Arrange
@@ -52,9 +49,6 @@ class MerchantCombinedMerchantProductOfferFileRequestExpanderPluginTest extends 
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandDoesNotSetFileSystemNameForUndefinedImportType(): void
     {
         // Arrange
@@ -75,9 +69,6 @@ class MerchantCombinedMerchantProductOfferFileRequestExpanderPluginTest extends 
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandHandlesMultipleFiles(): void
     {
         // Arrange
@@ -104,9 +95,6 @@ class MerchantCombinedMerchantProductOfferFileRequestExpanderPluginTest extends 
         $this->assertNull($files[1]->getFileInfo()->getFileSystemName());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandHandlesEmptyCollection(): void
     {
         // Arrange
@@ -120,9 +108,6 @@ class MerchantCombinedMerchantProductOfferFileRequestExpanderPluginTest extends 
         $this->assertCount(0, $dataImportMerchantFileCollectionRequestTransfer->getDataImportMerchantFiles());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandShouldFailWhenFileInfoPropertyIsMissing(): void
     {
         // Assert
@@ -139,9 +124,6 @@ class MerchantCombinedMerchantProductOfferFileRequestExpanderPluginTest extends 
         (new MerchantCombinedMerchantProductOfferFileRequestExpanderPlugin())->expand($dataImportMerchantFileCollectionRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandShouldFailWhenImporterTypePropertyIsMissing(): void
     {
         // Assert

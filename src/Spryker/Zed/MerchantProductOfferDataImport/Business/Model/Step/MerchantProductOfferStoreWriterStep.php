@@ -36,19 +36,11 @@ class MerchantProductOfferStoreWriterStep implements DataImportStepInterface, Da
      */
     protected $eventFacade;
 
-    /**
-     * @param \Spryker\Zed\DataImport\Dependency\Facade\DataImportToEventFacadeInterface $eventFacade
-     */
     public function __construct(DataImportToEventFacadeInterface $eventFacade)
     {
         $this->eventFacade = $eventFacade;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $productOfferStoreEntity = SpyProductOfferStoreQuery::create()
@@ -61,9 +53,6 @@ class MerchantProductOfferStoreWriterStep implements DataImportStepInterface, Da
         $this->addPublishEvent($productOfferStoreEntity);
     }
 
-    /**
-     * @return void
-     */
     public function afterExecute(): void
     {
         foreach ($this->entityEventTransfers as $entityEventTransfer) {
@@ -73,11 +62,6 @@ class MerchantProductOfferStoreWriterStep implements DataImportStepInterface, Da
         $this->entityEventTransfers = [];
     }
 
-    /**
-     * @param \Orm\Zed\ProductOffer\Persistence\SpyProductOfferStore $productOfferStoreEntity
-     *
-     * @return void
-     */
     protected function addPublishEvent(SpyProductOfferStore $productOfferStoreEntity): void
     {
         $eventEntityTransfer = new EventEntityTransfer();

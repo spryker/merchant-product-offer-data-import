@@ -147,65 +147,41 @@ class MerchantProductOfferDataImportBusinessFactory extends DataImportBusinessFa
         return new MerchantCombinedProductOfferValidator($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantReferenceToIdMerchantStep(): DataImportStepInterface
     {
         return new MerchantReferenceToIdMerchantStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createConcreteSkuValidationStep(): DataImportStepInterface
     {
         return new ConcreteSkuValidationStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantSkuValidationStep(): DataImportStepInterface
     {
         return new MerchantSkuValidationStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createApprovalStatusValidationStep(): DataImportStepInterface
     {
         return new ApprovalStatusValidationStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantProductOfferStoreWriterStep(): DataImportStepInterface
     {
         return new MerchantProductOfferStoreWriterStep($this->getEventFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreNameToIdStoreStep(): DataImportStepInterface
     {
         return new StoreNameToIdStoreStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
     {
         return new ProductOfferReferenceToIdProductOfferStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantProductOfferWriterStep(): DataImportStepInterface
     {
         return new MerchantProductOfferWriterStep($this->getEventFacade());
