@@ -15,16 +15,22 @@ use Spryker\Zed\MerchantProductOfferDataImport\Business\Exception\MerchantProduc
 class MerchantProductOfferDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_MERCHANT_PRODUCT_OFFER = 'merchant-product-offer';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_MERCHANT_PRODUCT_OFFER_STORE = 'merchant-product-offer-store';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT_OFFER = 'merchant-combined-product-offer';
